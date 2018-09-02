@@ -23,7 +23,29 @@
             </svg>
           </button>
         </form>
+
+        <nav class="user-nav">
+          <div onClick = "incrementValue()"class="user-nav__icon-box">
+              <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+              </svg>
+              <span class="user-nav__notification" id="bookmark">7</span>
+
+          </div>
+          <div class="user-nav__icon-box">
+              <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-chat"></use>
+              </svg>
+              <span class="user-nav__notification">13</span>
+          </div>
+          <div class="user-nav__user">
+            <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo">
+            <span class="user-nav__user-name">B.L</span>
+          </div>
+        </nav>
       </header>
+
+
       <div class="content">
         <nav class="sidebar">
         Navigation
@@ -34,4 +56,14 @@
       </div>
       </div>
     </body>
+
+    <script>
+    function incrementValue()
+    {
+        var value = parseInt(document.getElementById('bookmark').innerHtml, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById('bookmark').innerHtml = value;
+    }
+</script>
 </html>
