@@ -11,7 +11,7 @@ min-height: 50rem;
   font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(--color-grey-light-2);
+  border-bottom: var(--line);
 
   display: flex;
   justify-content: space-between;
@@ -35,6 +35,28 @@ min-height: 50rem;
 
 .hotel-view {
   background-color: #fff;
+  ///TEST
+
   flex: 1; // element grows as much as it can
-  height: 80rem;
+}
+
+.detail {
+  font-size: 1.4rem;
+display: flex;
+padding: 4.5rem;
+background-color: var(--color-grey-light-1);
+border-bottom: var(--line);
+margin-right: 4.5rem;
+
+}
+
+.description {
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+}
+
+.user-reviews {
+  flex: 1;
 }
