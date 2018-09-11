@@ -5,6 +5,12 @@ background-color: var(--color-grey-light-2);
 box-shadow: var(--shadow-dark);
 
 min-height: 50rem;
+
+@media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .header {
@@ -16,10 +22,20 @@ min-height: 50rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: $bp-small) {
+      flex-wrap: wrap;
+      align-items: space-around;
+      height: 11rem;
+    }
 }
 
 .content {
   display: flex;
+
+  @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+    }
 
 }
 
@@ -31,6 +47,7 @@ min-height: 50rem;
   display: flex;
   justify-content: space-between;
 
+
 }
 
 .hotel-view {
@@ -41,12 +58,21 @@ min-height: 50rem;
 }
 
 .detail {
-  font-size: 1.4rem;
+  font-size: 1.4rem; // both description and user reviews will inherit that value
 display: flex;
 padding: 4.5rem;
 background-color: var(--color-grey-light-1);
 border-bottom: var(--line);
 margin-right: 4.5rem;
+
+@media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      margin-right: 0;
+    }
 
 }
 
@@ -55,8 +81,20 @@ margin-right: 4.5rem;
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+      padding: 2rem;
+      margin-right: 3rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+      }
 }
 
 .user-reviews {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
