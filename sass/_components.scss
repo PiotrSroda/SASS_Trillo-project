@@ -402,15 +402,18 @@ margin-right: .5rem;
 
 
       // Older browsers approach
-      //background-image: url(../img/chevron-thin-right.svg);
-      //background-size: cover;
+      background-image: url(../img/chevron-thin-right.svg);
+      background-size: cover;
 
       //Newer browsers - masks
+      @supports (-webkit-mask-image: url()) or (mask-image: url()) {
       background-color: var(--color-primary);
       -webkit-mask-image: url(../img/chevron-thin-right.svg);
       -webkit-mask-size: cover; //covers the whole field so it clips properly
       mask-image: url(../img/chevron-thin-right.svg);
       mask-size: cover; //covers the whole field so it clips properly
+      background-image: none;
+      }
     }
 }
 
